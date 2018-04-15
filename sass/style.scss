@@ -1,0 +1,32 @@
+$ptb-highlight-color: rgb(171, 103, 0);
+
+.ptb__body {
+    font-family: 'Squada One', sans-serif;
+}
+
+.ptb__header {
+    display: flex;
+    justify-content: center;
+}
+
+.ptb__title {
+    color: $ptb-highlight-color;
+}
+
+.ptb__promo {
+    display: flex;
+}
+
+.ptb__promo-image-container {
+
+
+    flex-basis: 50%;
+}
+
+.ptb__promo-image {
+    max-width: 100%;
+}
+
+.ptb__promo-message {
+    flex-basis: 50%;
+}

@@ -1,0 +1,32 @@
+{
+  "name": "prestonthaiboxing",
+  "version": "1.0.0",
+  "description": "Website for the Preston Thai Boxing Muay Thai club.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcadia168/node-express-preston-thai-boxing-site.git"
+  },
+  "keywords": [
+    "muay",
+    "thai",
+    "preston"
+  ],
+  "author": "***REMOVED*** ***REMOVED***",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arcadia168/node-express-preston-thai-boxing-site/issues"
+  },
+  "homepage": "https://github.com/arcadia168/node-express-preston-thai-boxing-site#readme",
+  "dependencies": {
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "node-sass": "^4.8.3"
+  },
+  "devDependencies": {
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
