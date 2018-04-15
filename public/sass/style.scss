@@ -1,7 +1,9 @@
 $ptb-highlight-color: rgb(171, 103, 0);
+$ptb-background-highlight-color: darkorange;
 
 .ptb__body {
     font-family: 'Squada One', sans-serif;
+    margin: 0;
 }
 
 .ptb__header {
@@ -11,16 +13,16 @@ $ptb-highlight-color: rgb(171, 103, 0);
 
 .ptb__title {
     color: $ptb-highlight-color;
+    font-size: 22px;
 }
 
 .ptb__promo {
     display: flex;
+    flex-direction: column;
 }
 
 .ptb__promo-image-container {
-
-
-    flex-basis: 50%;
+    flex-basis: 100%;
 }
 
 .ptb__promo-image {
@@ -28,5 +30,6 @@ $ptb-highlight-color: rgb(171, 103, 0);
 }
 
 .ptb__promo-message {
-    flex-basis: 50%;
+    flex-basis: 100%;
+    background-color: $ptb-background-highlight-color;
 }

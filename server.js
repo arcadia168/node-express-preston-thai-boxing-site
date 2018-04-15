@@ -1,15 +1,17 @@
 const express = require('express')
 const bodyParser = require('body-parser');
-const sass = require('node-sass');
-
+const sass = require('node-sass-middleware');
 const app = express()
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
-  sass.middleware({
-    src: __dirname + '/sass', //where the sass files are 
-    dest: __dirname + '/public/css/', //where css should go
-    debug: true // obvious
+  sass({
+    src: __dirname + '/public/sass',
+    dest: __dirname + '/public/css',
+    debug: true,
+    indentedSyntax: false,
+    outputStyle: 'compressed',
+    prefix: '/css'
   })
 );
 app.set('view engine', 'ejs')
