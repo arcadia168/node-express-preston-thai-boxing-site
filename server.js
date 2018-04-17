@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const sass = require('node-sass-middleware');
 const app = express()
+var port = process.env.PORT || 3000; //to configure the server to run on Azure.
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
@@ -19,6 +20,5 @@ app.get('/', function (req, res) {
   res.render('index');
 })
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
-})
+app.listen(port);
+exports = module.exports = app;
