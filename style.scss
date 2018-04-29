@@ -3,6 +3,21 @@
 
 $ptb-highlight-color: rgb(171, 103, 0);
 $ptb-background-highlight-color: darkorange;
+$ptb-secondary-background-color: #f6f6f6;
+$ptb-primary-text-color: #342825;
+$ptb-secondary-text-color: rgb(94, 94, 94);
+
+@mixin ptb-link-styling() {
+  color: $ptb-primary-text-color;
+  text-decoration-color: $ptb-primary-text-color;
+  text-decoration-line: $ptb-primary-text-color;
+  text-decoration-style: $ptb-primary-text-color;
+}
+
+@mixin ptb-secondary-text-styling() {
+  color: $ptb-secondary-text-color;
+  font-size: 1rem;
+}
 
 .ptb__body {
   font-family: "Squada One", sans-serif;
@@ -17,6 +32,12 @@ $ptb-background-highlight-color: darkorange;
 
 .ptb__title {
   color: $ptb-highlight-color;
+
+  font-size: 22px;
+
+  @include mq($from: tablet) {
+    font-size: 32px;
+  }
 }
 
 .ptb__secton-title {
@@ -29,7 +50,7 @@ $ptb-background-highlight-color: darkorange;
 .ptb__section-title-text {
   text-align: center;
   font-size: 36px;
-  color: #aa6617;
+  color: $ptb-highlight-color;
 }
 
 .ptb__promo {
@@ -73,7 +94,10 @@ $ptb-background-highlight-color: darkorange;
 
 .ptb__promo-message-number {
   text-align: center;
-  color: #342825;
+}
+
+.ptb__promo-message-link {
+  @include ptb-link-styling();
 }
 
 .ptb__promo-message-email {
@@ -85,6 +109,7 @@ $ptb-background-highlight-color: darkorange;
   flex-direction: column;
   min-height: 275px;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .ptb__about-us-title {
@@ -92,25 +117,35 @@ $ptb-background-highlight-color: darkorange;
 }
 
 .ptb__about-us-content {
-  @include mq($from: tablet) {
-    display: flex;
-  }
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-bottom: 48px;
+}
+
+.ptb__about-us-text-heading {
+  font-size: 25px;
+  margin-top: 0px;
+}
+
+.ptb__about-us-text {
+  @include ptb-secondary-text-styling();
 }
 
 .ptb__about-us-section {
+  display: flex;
+  margin-bottom: 24px;
+
   @include mq($from: tablet) {
     flex: 1;
   }
-}
-
-.ptb__about-us-content .ptb__about-us-section {
-  height: 75px;
 }
 
 .ptb__training-session-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 48px;
 
   @include mq($from: tablet) {
     flex-direction: row;
@@ -120,6 +155,15 @@ $ptb-background-highlight-color: darkorange;
 .ptb__training-session {
   flex: 1;
   text-align: center;
+  @include ptb-secondary-text-styling();
+}
+
+.ptb__training-session-title {
+  color: $ptb-primary-text-color;
+}
+
+.ptb__training-session-link {
+  color: $ptb-background-highlight-color;
 }
 
 .ptb__classes {
@@ -127,6 +171,11 @@ $ptb-background-highlight-color: darkorange;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  background: $ptb-secondary-background-color;
+}
+
+.ptb__locations {
+  background: $ptb-secondary-background-color;
 }
 
 .ptb__locations-title {
@@ -143,7 +192,6 @@ $ptb-background-highlight-color: darkorange;
 }
 
 .ptb__location-map {
-  
   @include mq($from: tablet) {
     flex-basis: 50%;
   }
